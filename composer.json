@@ -1,0 +1,52 @@
+{
+    "name": "webdevelovers/codice-fiscale",
+    "description": "Utility library for italian TaxID calculations",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Simone Bernini",
+            "email": "simone@webdevelovers.org"
+        }
+    ],
+    "keywords": [
+        "italy",
+        "italian",
+        "tax-id",
+        "codice-fiscale"
+    ],
+    "require": {
+        "php": "^8.3",
+        "ext-mbstring": "*",
+        "davidepastore/codice-fiscale": "^0.10"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^12",
+        "solido/php-coding-standards": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "WebDevelovers\\CodiceFiscale\\": "./src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "WebDevelovers\\CodiceFiscale\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "phpstan": "phpstan analyse src/ -c phpstan.neon --level=8 --no-progress -vvv --memory-limit=2048M",
+        "cscheck": "vendor/bin/phpcs --standard=Solido src/",
+        "csfix": "vendor/bin/phpcbf --standard=Solido src/",
+        "test": "vendor/bin/phpunit tests --colors=always"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
