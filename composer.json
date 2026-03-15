@@ -16,7 +16,7 @@
         "codice-fiscale"
     ],
     "require": {
-        "php": "^8.3",
+        "php": "^8.4",
         "ext-mbstring": "*",
         "davidepastore/codice-fiscale": "^0.10"
     },
