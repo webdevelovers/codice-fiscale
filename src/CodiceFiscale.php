@@ -15,7 +15,7 @@ use WebDevelovers\CodiceFiscale\Model\TaxIDData;
 
 class CodiceFiscale
 {
-    public const string PERSON_TAX_ID_REGEX = '/^[A-Za-z]{6}\d{2}[A-Za-z]\d{2}[A-Za-z]\d{3}[A-Za-z]$/';
+    public const string PERSON_TAX_ID_REGEX = '/^[A-Za-z]{6}[0-9LMNPQRSTUVlmnpqrstuv]{2}[A-Za-z][0-9LMNPQRSTUVlmnpqrstuv]{2}[A-Za-z][0-9LMNPQRSTUVlmnpqrstuv]{3}[A-Za-z]$/';
     public const string COMPANY_TAX_ID_REGEX = '/^(IT)?\d{11}$/';
 
     /** @throws TaxIDCalculatorException */
